@@ -24,9 +24,13 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- contact form submit -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <!-- navbar section  -->
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
    <div class="container">
     <a class="navbar-brand" href="index.html">
         <img src="images/logo__1_-removebg-preview.png" alt="StudyLab Logo" class="navbar-logo">
@@ -73,26 +77,27 @@
          <div class="col-md-5 order-md-last">
           <div class="login-wrap p-4 p-md-5">
               <h3 class="mb-4">Register Now</h3>
-              <form action="#" class="signup-form">
-                 <div class="form-group">
+              <form action="" id="submit-form" class="signup-form">
+                <div class="form-group">
                     <label class="label" for="name">Full Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Your Name">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name">
                 </div>
                 <div class="form-group">
                     <label class="label" for="email">Email Address</label>
-                    <input type="email" class="form-control" placeholder="Enter Your Email Address">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
                 </div>
                 <div class="form-group">
-                 <label class="label" for="Location">Location</label>
-                 <input type="text" class="form-control" placeholder="Enter Your Location">
-             </div>
-             <div class="form-group">
-                 <label class="label" for="fa-phone">Contact Number</label>
-                 <input type="tel" class="form-control" placeholder="Enter Your Contact Number">
-             </div>
-             <div class="form-group d-flex justify-content-end mt-4">                
-                <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>                 
-             </div>
+                    <label class="label" for="number">Contact Number</label>
+                    <input type="tel"
+                     class="form-control" name="number" id="number" placeholder="Contact Number">
+                </div>
+                <div class="form-group">
+                    <label class="label" for="#">Message</label>
+                    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group d-flex justify-content-end mt-4">                
+                    <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>                 
+                </div>
              <p>We Will Get Back To You</p>
          </form>         
      </div>
@@ -101,70 +106,6 @@
 </div>
 </section>
 
-<!-- Courses Profile Section-->
-<section class="ftco-section">
-   <div class="container">
-      <div class="row justify-content-center pb-4">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<span class="subheading">Start Learning Today</span>
-            <h2 class="mb-4">Browse Online\ODL  Course Category</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-     <div class="col-md-3 col-lg-2">
-        <a href="course.html" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-           <div class="text w-100 text-center">
-              <h3>BA</h3>
-              <span>5+ course</span>
-          </div>
-      </a>
-  </div>
-  <div class="col-md-3 col-lg-2">
-    <a href="course.html" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-9.jpg);">
-       <div class="text w-100 text-center">
-          <h3>BCOM</h3>
-          <span>5+ course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="course.html" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-3.jpg);">
-       <div class="text w-100 text-center">
-          <h3>BBA</h3>
-          <span>5+ course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-5.jpg);">
-       <div class="text w-100 text-center">
-          <h3>MA</h3>
-          <span>5+ course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-8.jpg);">
-       <div class="text w-100 text-center">
-          <h3>MCOM</h3>
-          <span>5+ course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-6.jpg);">
-       <span class="text w-100 text-center">
-          <h3>MCA</h3>
-          <span>5+ course</span>
-      </span>
-  </a>
-</div>
-<div class="col-md-12 text-center mt-5">
-    <a href="#" class="btn btn-secondary">See All Courses</a>
-</div>
-</div>
-</div>
-</section>
 
 <!-- Courses Cards Section -->
 <section class="ftco-section bg-light">
@@ -179,45 +120,30 @@
        <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
              <a href="#" class="img" style="background-image: url(images/work-1.jpg);">
-                <span class="price">Software</span>
+                <span class="price">BA</span>
             </a>
             <div class="text p-4">
-                <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-                <p class="advisor">Advisor <span>Tony Garret</span></p>
-                <ul class="d-flex justify-content-between">
-                   <li><span class="flaticon-shower"></span>2300</li>
-                   <li class="price">$199</li>
-               </ul>
+                <h3><a href="#">Develop critical thinking, communication, and analytical skills with a well-rounded education in humanities, social sciences, and more.</a></h3>                
            </div>
        </div>
    </div>
    <div class="col-md-4 ftco-animate">
       <div class="project-wrap">
          <a href="#" class="img" style="background-image: url(images/work-2.jpg);">
-            <span class="price">Software</span>
+            <span class="price">BCOM</span>
         </a>
         <div class="text p-4">
-            <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-            <p class="advisor">Advisor <span>Tony Garret</span></p>
-            <ul class="d-flex justify-content-between">
-               <li><span class="flaticon-shower"></span>2300</li>
-               <li class="price">$199</li>
-           </ul>
+            <h3><a href="#">Gain expertise in accounting, finance, business management, and economics to build a strong foundation for a successful career in commerce and finance.</a></h3>           
        </div>
    </div>
 </div>
 <div class="col-md-4 ftco-animate">
   <div class="project-wrap">
      <a href="#" class="img" style="background-image: url(images/work-3.jpg);">
-        <span class="price">Software</span>
+        <span class="price">BBA</span>
     </a>
     <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
+        <h3><a href="#">Build strong leadership, management, and entrepreneurial skills to excel in the dynamic world of business and administration.</a></h3>        
    </div>
 </div>
 </div>
@@ -225,51 +151,40 @@
 <div class="col-md-4 ftco-animate">
   <div class="project-wrap">
      <a href="#" class="img" style="background-image: url(images/work-4.jpg);">
-        <span class="price">Software</span>
+        <span class="price">MA</span>
     </a>
     <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
+        <h3><a href="#"> Deepen your knowledge in humanities and social sciences while enhancing research, critical thinking, and analytical skills for academic and professional growth.</a></h3>        
    </div>
 </div>
 </div>
 <div class="col-md-4 ftco-animate">
   <div class="project-wrap">
      <a href="#" class="img" style="background-image: url(images/work-5.jpg);">
-        <span class="price">Software</span>
+        <span class="price">MCOM</span>
     </a>
     <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
+        <h3><a href="#">Advance your expertise in finance, accounting, and business management, preparing for leadership roles in commerce, banking, and corporate sectors.</a></h3>       
    </div>
 </div>
 </div>
 <div class="col-md-4 ftco-animate">
   <div class="project-wrap">
      <a href="#" class="img" style="background-image: url(images/work-6.jpg);">
-        <span class="price">Software</span>
+        <span class="price">MCA</span>
     </a>
     <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
+        <h3><a href="#">Gain advanced knowledge in software development, programming, and IT management to build a successful career in the ever-evolving tech industry.</a></h3>        
    </div>
 </div>
 </div>
 </div>
 </div>
+<div class="col-md-12 text-center mt-5">
+    <a href="course.html" class="btn btn-secondary">See All Courses</a>
+</div>
 </section>
+
 
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
  <div class="overlay"></div>
@@ -322,7 +237,7 @@
             <div class="row">
                <div class="col-md-6 d-flex">
                   <div class="d-flex about-wrap">
-                     <div class="img d-flex align-items-center justify-content-center" style="background-image:url(images/about-1.jpg);">
+                     <div class="img d-flex align-items-center justify-content-center" style="background-image:url(images/PG.webp   );">
                      </div>
                      <div class="img-2 d-flex align-items-center justify-content-center" style="background-image:url(images/about.jpg);">
                      </div>
@@ -333,7 +248,7 @@
                   <div class="col-md-12 heading-section ftco-animate">
                      <span class="subheading">Enhanced Your Skills</span>
                      <h2 class="mb-4">Learn Anything You Want Today</h2>
-                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                     <p>Welcome to VioWin Edu Cafe, a trusted online and open distance learning (ODL) platform offering high-quality Undergraduate (UG) and Postgraduate (PG) courses. We are committed to bridging the gap between education and accessibility, empowering students and professionals to achieve their academic and career goals from anywhere in the world.</p>
                      <p><a href="#" class="btn btn-primary">Get in touch with us</a></p>
                  </div>
              </div>
@@ -470,36 +385,17 @@
 </div>
 </section>
 
-<section class="ftco-intro ftco-section ftco-no-pb">
- <div class="container">
-    <div class="row justify-content-center">
-       <div class="col-md-12 text-center">
-          <div class="img"  style="background-image: url(images/bg_4.jpg);">
-             <div class="overlay"></div>
-             <h2>We Are StudyLab An Online Learning Center</h2>
-             <p>We can manage your dream building A small river named Duden flows by their place</p>
-             <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Enroll Now</a></p>
-         </div>
-     </div>
- </div>
-</div>
-</section>
 
+<!-- Services -->
 <section class="ftco-section services-section">
   <div class="container">
     <div class="row d-flex">
       <div class="col-md-6 heading-section pr-md-5 ftco-animate d-flex align-items-center">
          <div class="w-100 mb-4 mb-md-0">
-            <span class="subheading">Welcome to StudyLab</span>
-            <h2 class="mb-4">We Are StudyLab An Online Learning Center</h2>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <div class="d-flex video-image align-items-center mt-md-4">
-              <a href="#" class="video img d-flex align-items-center justify-content-center" style="background-image: url(images/about.jpg);">
-                 <span class="fa fa-play-circle"></span>
-             </a>
-             <h4 class="ml-4">Learn anything from StudyLab, Watch video</h4>
-         </div>
+            <span class="subheading">Welcome to VIOWIN Edu Cafe</span>
+        <h2 class="mb-4">Empowering Learning Through Online & ODL Education</h2>
+        <p>At <strong>VIOWIN Edu Cafe</strong>, we are committed to making education accessible to everyone through our <strong>online and open distance learning (ODL) programs</strong>. Our platform provides high-quality <strong>Undergraduate (UG) and Postgraduate (PG) courses</strong> designed to help students and professionals upskill, reskill, and excel in their careers.</p>
+        <p>With a flexible learning approach, expert faculty, and industry-aligned curriculum, we ensure that you gain practical knowledge and recognized certifications that open doors to endless opportunities. Join us in shaping a smarter future with education that fits your lifestyle!</p>        
      </div>
  </div>
  <div class="col-md-6">
@@ -615,70 +511,95 @@
 </div>
 </section>
 
+
 <!-- Footer Section Code -->
-
 <footer class="ftco-footer ftco-no-pt">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-md pt-5">
-        <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">About Us</h2>
-          <p>VIOWIN Edu Cafe stands as a beacon of excellence in the realm of distance education. Rooted in a passion for learning and a commitment to student success, our institute offers a diverse array of courses tailored to meet the needs and aspirations of lerners worldwide.</p>
-          <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-            <li class="ftco-animate"><a href="#"><span class="fa fa-whatsapp"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-        </ul>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <p>VIOWIN Edu Cafe stands as a beacon of excellence in the realm of distance education. Rooted in a passion for learning and a commitment to student success, our institute offers a diverse array of courses tailored to meet the needs and aspirations of lerners worldwide.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-whatsapp"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Help Desk</h2>
+            <ul class="list-unstyled">
+              <li><a href="tel:+916238458223" class="py-2 d-block">Customer Care</a></li>
+              <li><a href="tel:+916238458223" class="py-2 d-block">Legal Help</a></li>
+              <li><a href="course.html" class="py-2 d-block">Services</a></li>                
+              <li><a href="tel:+916238458223" class="py-2 d-block">Call Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="about.html" class="py-2 d-block">About</a></li>
+              <li><a href="course.html" class="py-2 d-block">Courses</a></li>
+              <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li> 
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map-marker"></span><span class="text">18/92, 2nd Floor Elikotil Arcade, Above SBI Regional Office, Varangode, Malappuram Pin:676519 Kerala India</span></li>
+                <li><a href="tel:+916238458223"><span class="icon fa fa-phone"></span><span class="text">+91 6238 458 223</span></a></li>           
+                <li><a href="mailto:mail@viowin.org"><span class="icon fa fa-paper-plane"></span><span class="text">mail@viowin.org</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved VIOWIN Edu Cafe | Powerd by 
+            <a href="https://creativio.in" target="_blank">Creativio Media & Advertising LLP</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
     </div>
-</div>
-<div class="col-md pt-5">
-    <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-      <h2 class="ftco-heading-2">Help Desk</h2>
-      <ul class="list-unstyled">
-        <li><a href="#" class="py-2 d-block">Customer Care</a></li>
-        <li><a href="#" class="py-2 d-block">Legal Help</a></li>
-        <li><a href="course.html" class="py-2 d-block">Services</a></li>                
-        <li><a href="tel:+916238458223" class="py-2 d-block">Call Us</a></li>
-    </ul>
-</div>
-</div>
-<div class="col-md pt-5">
-   <div class="ftco-footer-widget pt-md-5 mb-4">
-      <h2 class="ftco-heading-2">Quick Links</h2>
-      <ul class="list-unstyled">
-        <li><a href="about.html" class="py-2 d-block">About</a></li>
-        <li><a href="course.html" class="py-2 d-block">Courses</a></li>
-        <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li> 
-    </ul>
-</div>
-</div>
-<div class="col-md pt-5">
-    <div class="ftco-footer-widget pt-md-5 mb-4">
-       <h2 class="ftco-heading-2">Have a Questions?</h2>
-       <div class="block-23 mb-3">
-         <ul>
-           <li><span class="icon fa fa-map-marker"></span><span class="text">18/92, 2nd Floor Elikotil Arcade, Above SBI Regional Office, Varangode, Malappuram Pin:676519 Kerala India</span></li>
-           <li><a href="tel:+916238458223"><span class="icon fa fa-phone"></span><span class="text">+91 6238 458 223</span></a></li>           
-       </ul>
-   </div>
-</div>
-</div>
-</div>
-<div class="row">
-  <div class="col-md-12 text-center">
-
-    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved VIOWIN Edu Cafe |  Powerd by <a href="https://creativio.in" target="_blank">Creativio Media & Advertising LLP</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-  </div>
-</div>
-</div>
 </footer>
+  
 
 
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbzlWNFMvO6VxYGun3ygdd7sEXyUiVTvXBfUv6YA-61LgmYAIUdB9QqWgtUb6B-9E9PHEw/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
 
 <script src="js/jquery.min.js"></script>
