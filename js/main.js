@@ -251,3 +251,28 @@
 
 })(jQuery);
 
+// Filtering Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const universityCards = document.querySelectorAll('.university-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const filterValue = button.dataset.filter;
+
+            universityCards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
