@@ -252,27 +252,71 @@
 })(jQuery);
 
 // Filtering Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const universityCards = document.querySelectorAll('.university-card');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const filterButtons = document.querySelectorAll('.filter-btn');
+//     const universityCards = document.querySelectorAll('.university-card');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+//     filterButtons.forEach(button => {
+//         button.addEventListener('click', () => {
+//             // Remove active class from all buttons
+//             filterButtons.forEach(btn => btn.classList.remove('active'));
+//             button.classList.add('active');
             
-            const filterValue = button.dataset.filter;
+//             const filterValue = button.dataset.filter;
 
-            universityCards.forEach(card => {
-                const cardCategory = card.dataset.category;
-                if (filterValue === 'all' || cardCategory === filterValue) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+//             universityCards.forEach(card => {
+//                 const cardCategory = card.dataset.category;
+//                 if (filterValue === 'all' || cardCategory === filterValue) {
+//                     card.style.display = 'block';
+//                 } else {
+//                     card.style.display = 'none';
+//                 }
+//             });
+//         });
+//     });
+// });
+
+
+// new course section 
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.course-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            
+            courseCards.forEach(card => {
+                card.style.display = 
+                    filter === 'all' || filter === card.dataset.category 
+                    ? 'block' 
+                    : 'none';
             });
         });
     });
 });
 
+
+// counter section
+document.addEventListener("DOMContentLoaded", function () {
+	let counters = document.querySelectorAll('.counter-number');
+	let speed = 200; // Adjust speed
+
+	counters.forEach(counter => {
+		let animate = () => {
+			let value = +counter.getAttribute('data-number');
+			let data = +counter.innerText;
+			let time = value / speed;
+			if (data < value) {
+				counter.innerText = Math.ceil(data + time);
+				setTimeout(animate, 30);
+			} else {
+				counter.innerText = value;
+			}
+		};
+		animate();
+	});
+});
