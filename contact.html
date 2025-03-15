@@ -9,6 +9,8 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 	<!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon.webp"/>
 
@@ -76,40 +78,33 @@
 						<div class="row no-gutters">
 							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
 								<div class="contact-wrap w-100 p-md-5 p-4">									
-									<form action='' id="submit-form" name="contactForm" class="contactForm">
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label class="label" for="name">Full Name</label>
-													<input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name">
-												</div>
-											</div>
-											<div class="col-md-6"> 
-												<div class="form-group">
-													<label class="label" for="email">Email Address</label>
-													<input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<label class="label" for="number">Contact Number</label>
-													<input type="tel"
-													 class="form-control" name="number" id="number" placeholder="Contact Number">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<label class="label" for="#">Message</label>
-													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-primary">
-													<div class="submitting"></div>
-												</div>
-											</div>
+									<form action="" id="submit-form" class="registration-form">
+										<div class="form-group">											
+											<input type="text" name="name" id="name" placeholder="Full Name" required>
+											<i class="fas fa-user"></i>
 										</div>
+										<div class="form-group">
+											<input type="email" name="email" id="email" placeholder="Email Address" required>
+											<i class="fas fa-envelope"></i>
+										</div>
+										<div class="form-group">
+											<input type="tel" name="number" id="number" placeholder="Contact Number" required>
+											<i class="fas fa-phone"></i>
+										</div>
+										<div class="form-group">
+											<select required name="course" id="course">
+												<option value="">Select Course</option>
+												<option>UG Programs</option>
+												<option>PG Programs</option>
+												<option>Diploma Courses</option>
+												<option>SSLC/+2</option>
+											</select>
+											<i class="fas fa-graduation-cap"></i>
+										</div>
+										<button type="submit" class="submit-btn">
+											<span class="btn-text">Apply Now</span>
+											<i class="fas fa-arrow-right"></i>
+										</button>
 									</form>
 								</div>
 							</div>
@@ -177,22 +172,22 @@
 					<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 						<li class="ftco-animate">
 						  <a href="https://wa.me/+916238458223" target="_blank">
-							  <span class="fa fa-whatsapp"></span>
+							  <span class="fa-brands fa-whatsapp"></span>
 						  </a>
 						</li>
 						<li class="ftco-animate">
 						  <a href="https://www.facebook.com/share/16BR9NmzGK/">
-							<span class="fa fa-facebook"></span>
+							<span class="fa-brands fa-facebook"></span>
 						  </a>
 						</li>
 						<li class="ftco-animate">
 						  <a href="https://www.instagram.com/vio_wineducafe?igsh=MXVjZHhmODk3a2N5Zg==">
-							<span class="fa fa-instagram"></span>
+							<span class="fa-brands fa-instagram"></span>
 						  </a>
 						</li>
 						<li class="ftco-animate">
 						  <a href="#">
-							<span class="fa fa-youtube"></span>
+							<span class="fa-brands fa-youtube"></span>
 						  </a>
 						</li>
 					  </ul>
