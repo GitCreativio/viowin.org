@@ -8298,6 +8298,27 @@ h1, h2, h3, h4, h5,
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
 }
 
+.contact-btn {  
+  padding: 0.3rem;
+  margin-top: 1rem;
+  background: var(--primary-red);
+  color: var(--light);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-btn:hover {
+  color: var(--light);  
+}
+
+
 .submit-btn {
   width: 100%;
   padding: 1rem;
@@ -8452,7 +8473,7 @@ h1, h2, h3, h4, h5,
     margin: 0.5rem;
     border-radius: 30px;
     transition: all 0.3s ease;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 500;
 }
 
