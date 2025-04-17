@@ -8340,6 +8340,7 @@ h1, h2, h3, h4, h5,
   padding-right: 1.5rem;
 }
 
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero-content {
@@ -8531,118 +8532,7 @@ h1, h2, h3, h4, h5,
     font-size: 0.9rem;
 }
 
-/* University Showcase Styles */
-.university-showcase {
-  padding: 5rem 0;
-  background: #f9fafb;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.university-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.university-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.university-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-image {
-  position: relative;
-  height: 200px;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.university-logo {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  padding: 0.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.university-logo img {
-  width: 80px;
-  height: auto;
-}
-
-.card-content {
-  padding: 2rem 1.5rem 1.5rem;
-  text-align: center;
-  background-color: #f7f3f5;  
-}
-
-.university-name {
-  font-size: 1.25rem;
-  color:#ff0000;
-  margin-bottom: 0.5rem;
-}
-
-.university-location {
-  color: #718096;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.university-meta {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.85rem;
-}
-
-.ranking {
-  color: #48bb78;
-  font-weight: 600;
-}
-
-.programs {
-  color: #4299e1;
-  font-weight: 600;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #4299e1;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background: #3182ce;
-}
-
-@media (max-width: 768px) {
-  .university-grid {
-      grid-template-columns: 1fr;
-  }
-  
+@media (max-width: 768px) { 
   .filter-buttons {
       flex-wrap: wrap;
   }
@@ -9872,123 +9762,6 @@ textarea.form-control {
   transform: translateY(-8px) rotate(-45deg);
 }    
 
-/* University Showcase Styles */
-.university-showcase {
-  padding: 5rem 0;
-  background: #f9fafb;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.university-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.university-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.university-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-image {
-  position: relative;
-  height: 200px;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.university-logo {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  padding: 0.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.university-logo img {
-  width: 80px;
-  height: auto;
-}
-
-.card-content {
-  padding: 2rem 1.5rem 1.5rem;
-  text-align: center;
-  background-color: #f7f3f5;  
-}
-
-.university-name {
-  font-size: 1.25rem;
-  color:#ff0000;
-  margin-bottom: 0.5rem;
-}
-
-.university-location {
-  color: #718096;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.university-meta {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.85rem;
-}
-
-.ranking {
-  color: #48bb78;
-  font-weight: 600;
-}
-
-.programs {
-  color: #4299e1;
-  font-weight: 600;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #4299e1;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background: #3182ce;
-}
-
-@media (max-width: 768px) {
-  .university-grid {
-      grid-template-columns: 1fr;
-  }
-  
-  .filter-buttons {
-      flex-wrap: wrap;
-  }
-}
-
 /* services section */
 
 .services-section {
@@ -10112,6 +9885,5 @@ a:hover{
   .breadcrumbs{
     color:#ffd700;
   }
-
 
   
