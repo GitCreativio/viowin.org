@@ -320,3 +320,40 @@ document.addEventListener("DOMContentLoaded", function () {
 		animate();
 	});
 });
+
+
+// logo slider js
+(function() {
+	const track = document.getElementById('carouselTrack');
+	const slides = Array.from(track.children);
+	const prevButton = document.getElementById('prevBtn');
+	const nextButton = document.getElementById('nextBtn');
+	let currentIndex = 0;
+	const slidesToShow = 5;
+
+	function updateButtons() {
+		prevButton.disabled = currentIndex === 0;
+		nextButton.disabled = currentIndex >= slides.length - slidesToShow;
+	}
+
+	function moveToIndex(index) {
+		const slideWidth = slides[0].getBoundingClientRect().width;
+		track.style.transform = `translateX(-${index * slideWidth}px)`;
+		currentIndex = index;
+		updateButtons();
+	}
+
+	// Initialize
+	updateButtons();
+
+	// Button click events
+	prevButton.addEventListener('click', () => {
+		if (currentIndex > 0) moveToIndex(currentIndex - 1);
+	});
+	nextButton.addEventListener('click', () => {
+		if (currentIndex < slides.length - slidesToShow) moveToIndex(currentIndex + 1);
+	});
+
+	// Handle window resize to adjust translate
+	window.addEventListener('resize', () => moveToIndex(currentIndex));
+})();

@@ -9886,4 +9886,78 @@ a:hover{
     color:#ffd700;
   }
 
+  /* university logo slider section  */
   
+      /* Carousel container */
+      .logo-carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem 0;
+        box-sizing: border-box;
+      }
+
+          /* Section heading */
+      .logo-carousel .carousel-heading {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #333;
+        font-family: Arial, sans-serif;
+      }
+  
+      /* Track holding slides */
+      .logo-carousel .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+  
+      /* Individual slide */
+      .logo-carousel .slide {
+        flex: 0 0 20%; /* show 5 slides */
+        box-sizing: border-box;
+        padding: 0 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .logo-carousel .slide img {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+  
+      /* Navigation arrows */
+      .logo-carousel .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .logo-carousel .arrow:disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+      .logo-carousel .arrow-left {
+        left: 0.5rem;
+      }
+      .logo-carousel .arrow-right {
+        right: 0.5rem;
+      }
+  
+      /* Responsive: fewer logos on smaller screens */
+      @media (max-width: 768px) {
+        .logo-carousel .slide { flex: 0 0 33.3333%; }
+      }
+      @media (max-width: 480px) {
+        .logo-carousel .slide { flex: 0 0 50%; }
+      }
