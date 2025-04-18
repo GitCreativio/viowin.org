@@ -7897,8 +7897,7 @@ h1, h2, h3, h4, h5,
     z-index: 3;
   }
   @media (max-width: 991.98px) {
-    .ftco-navbar-light {
-      background: #000000 !important;
+    .ftco-navbar-light {      
       position: relative;
       top: 0;
       padding-top: 0;
@@ -7956,7 +7955,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 0;
       padding-top: 0.3rem !important;
       padding-bottom: 0.3rem !important;
-      color: #fff;
+      color: #000;
     }
   }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
@@ -8142,6 +8141,29 @@ h1, h2, h3, h4, h5,
   padding: 0 20px; 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce4be8', endColorstr='#207ce5', GradientType=1 ); }
 
+  @media (max-width: 991.98px) {
+    .nav-item .contact-btn{
+      display: none;
+    }
+
+    .ftco-navbar-light .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 15px;
+    }
+  
+    .navbar-brand {
+      margin-right: auto;
+    }
+  
+    .navbar-toggler {
+      margin-left: auto;
+      margin-top: -60px;
+    }
+  }
+  
 /* Hero Section Styles */
 :root {
   --primary-red: #ff0000;
