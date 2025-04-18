@@ -302,23 +302,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // counter section
 document.addEventListener("DOMContentLoaded", function () {
-	let counters = document.querySelectorAll('.counter-number');
-	let speed = 200; // Adjust speed
+    let counters = document.querySelectorAll('.counter-number');
+    let speed = 200; // Lower number = faster animation
 
-	counters.forEach(counter => {
-		let animate = () => {
-			let value = +counter.getAttribute('data-number');
-			let data = +counter.innerText;
-			let time = value / speed;
-			if (data < value) {
-				counter.innerText = Math.ceil(data + time);
-				setTimeout(animate, 30);
-			} else {
-				counter.innerText = value;
-			}
-		};
-		animate();
-	});
+    counters.forEach(counter => {
+        let suffix = counter.getAttribute('data-suffix') || '';
+        let target = +counter.getAttribute('data-number');
+        let current = 0;
+        
+        let animate = () => {
+            const time = target / speed;
+            current += time;
+            
+            if (current < target) {
+                counter.innerText = Math.ceil(current).toLocaleString() + suffix;
+                setTimeout(animate, 30);
+            } else {
+                counter.innerText = target.toLocaleString() + suffix;
+            }
+        };
+        
+        animate();
+    });
 });
 
 
